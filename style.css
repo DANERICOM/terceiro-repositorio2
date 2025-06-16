@@ -87,7 +87,7 @@ body{
 
 .parametro-senha-botoes {
     display: flex;
-    justify-content: center;
+    justify-content: left;/*center*/
 }
 
 .parametro-senha__botao{

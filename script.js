@@ -19,5 +19,5 @@ function aumentaTamanho(){
     if(tamanhoSenha < tamanhoMaxSenha){
         tamanhoSenha += 1;
     }
-    numeroSenha
+    numeroSenha.textContent = tamanhoSenha;
 }

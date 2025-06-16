@@ -1,5 +1,5 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');//puxar o documento do html
-let tamanhoSenha = 12;
+let tamanhoSenha = 10;
 const tamanhoMaxSenha = 20;
 numeroSenha.textContent = tamanhoSenha;
 

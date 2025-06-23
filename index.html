@@ -17,7 +17,7 @@
         </div>
         <div class="conteudo-senha">
             <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha">
+            <input name="senha" type="text" id="campo-senha" readonly>
         </div>
         <div class="parametro">
             <h3 class="parametro-titulo">Personalize sua senha</h3>
@@ -32,27 +32,22 @@
                 </div>                
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
-                    <!--TIPOS DE CARACTERES-->
-                        <!--MAIUSCULAS-->
-                        <div class="parametro-senha-checkbox">
-                            <input name="maiusculo" type="checkbox" class="checkbox" checked>
-                            <label for="maisculo">Letras maiúsculas</label>
-                        </div>
-                        <!--MINUSCULAS-->>
-                        <div class="parametro-senha-checkbox">
-                            <input name="minusculo" type="checkbox" class="checkbox" checked>
-                            <label for="minusculo">Letras minúsculas</label>
-                        </div>
-                        <!--NUMEROS-->>
-                        <div class="parametro-senha-checkbox">
-                            <input name="numero" type="checkbox" class="checkbox" checked>
-                            <label for="numero">Números</label>
-                        </div>
-                        <!--SIMBOLOS-->>
-                        <div class="parametro-senha-checkbox">
-                            <input name="simbolo" type="checkbox" class="checkbox" checked>
-                            <label for="simbolo">Símbolos</label>
-                        </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="maiusculo" type="checkbox" class="checkbox" checked >
+                        <label for="maiusculo">Letras maiúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="minusculo" type="checkbox" class="checkbox" checked >
+                        <label for="minusculo">Letras minúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="numero" type="checkbox" class="checkbox" checked >
+                        <label for="numero">Números</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="simbolo" type="checkbox" class="checkbox" checked >
+                        <label for="simbolo">Símbolos</label>
+                    </div>
                 </div>
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
@@ -62,13 +57,15 @@
                         <p>Fraca</p>
                         <p>Média</p>
                         <p>Forte</p>
-                    </parametro-senha-texto>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <script scr="main.js"></script><!--deixar no final, pois como o script puxa o documento html, deixar ele no meio ou começo fará ele n puxar o tudo-->
+    <script src="main.js"></script>
 </body>
 
 </html>
 
+    
+    

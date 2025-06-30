@@ -1,4 +1,3 @@
-
 const numeroSenha = document.querySelector('.parametro-senha__texto');//puxar o documento do html
 //variaveis
 let tamanhoSenha = 12;

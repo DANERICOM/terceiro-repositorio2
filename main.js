@@ -1,11 +1,19 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');//puxar o documento do html
+const campoSenha = document.querySelector('#campo-senha');
+//GERAR OS CARACTERES
+const checkbox = document.querySelectorAll('.checkbox');//puxar as checkboxs e gravar na variavel seus valores
+const botoes = document.querySelectorAll('.parametro-senha__botao');
+const forcaSenha = document.querySelector('.forca');
+    //tipos de caracteres
+    const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
+    const numeros = '1234567890';
+    const simbolos = 'u!@#$%&*?';
 //variaveis
 let tamanhoSenha = 12;
 let tamanhoMaxSenha = 20;
 let tamanhoMinSenha = 8;
 numeroSenha.textContent = tamanhoSenha;
-
-const botoes = document.querySelectorAll('.parametro-senha__botao');
 
 //definindo os botões
 botoes[0].onclick = diminuiTamanho;
@@ -26,14 +34,6 @@ botoes[1].onclick = aumentaTamanho;
         numeroSenha.textContent = tamanhoSenha;
         geraSenha();
     }
-//GERAR OS CARACTERES
-const campoSenha = document.querySelector('#campo-senha');
-const checkbox = document.querySelectorAll('.checkbox');//puxar as checkboxs e gravar na variavel seus valores
-    //tipos de caracteres
-    const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
-    const numeros = '1234567890';
-    const simbolos = 'u!@#$%&*?';
 geraSenha();
 function geraSenha(){
     //só gerar determinados caracteres caso a checkbox deles estejam positivos
@@ -63,4 +63,17 @@ function geraSenha(){
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
+}
+
+//FORÇA DA SENHA
+function classificaSenha(){
+    forcaSenha.classList.remove('fraca', 'media', 'forte');
+    if(tamanhoSenha>12){
+        forcaSenha.classList.add('forte');
+    }else if(tamanhoSenha<=12){
+        forcaSenha.classList.add('media');
+        if(tamanhoSenha<=10){
+            forcaSenha.classList.add('fraca');
+        }
+    }
 }
